@@ -1,0 +1,56 @@
+<%- include('Header') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+         <div class="page-breadcrumb">
+            <div class="row">
+                <div class="col-12 d-flex no-block align-items-center">
+                    <h4 class="page-title text-dark">Add Blog</h4>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+             <div class="row">    
+                <div class="col-md-6 ">
+                    <div class="card card-hover">
+                        <div class="box bg-light">
+                            <form class="p-4 " action="/insertBlog" method="post" enctype="multipart/form-data">
+                                <div class="mb-3">
+                                  <label class="form-label">Title:</label>
+                                  <input type="text" class="form-control" name="title" >
+                                </div>
+                                <div class="mb-3">
+                                  <label class="form-label">Description:</label>
+                                  <input type="text" class="form-control" name="description">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Image:</label>
+                                    <input type="file" class="form-control" name="image">
+                                  </div>
+                                <button type="submit" class="btn btn-info">Submit</button>
+                                <button  class="btn btn-info ms-3">
+                                    <a class="text-light" href="/admin">View</a>
+                                </button>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+         <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+</body>
+</html>
+<%- include('Footer') %>
+
